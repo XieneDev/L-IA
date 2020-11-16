@@ -1,0 +1,183 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://Scripts/main_menu.gd" type="Script" id=1]
+[ext_resource path="res://Resources/Tileset.tres" type="TileSet" id=2]
+[ext_resource path="res://Objects/Sawblade.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Resources/TitleFont.tres" type="DynamicFont" id=4]
+[ext_resource path="res://Sprites/Icons/yt.png" type="Texture" id=5]
+[ext_resource path="res://Sprites/Icons/itch.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/Icons/yt_hover.png" type="Texture" id=7]
+[ext_resource path="res://Sprites/Icons/itch_hover.png" type="Texture" id=8]
+[ext_resource path="res://Audio/SFX/Shoot.wav" type="AudioStream" id=9]
+[ext_resource path="res://Sprites/Icons/twitter.png" type="Texture" id=10]
+[ext_resource path="res://Sprites/Icons/twitter_hover.png" type="Texture" id=11]
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[sub_resource type="StyleBoxEmpty" id=3]
+
+[sub_resource type="StyleBoxEmpty" id=4]
+
+[node name="MainMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 2 )
+cell_size = Vector2( 16, 16 )
+format = 1
+tile_data = PoolIntArray( -1, 0, 0, -65536, 0, 1, -65535, 0, 1, -65534, 0, 1, -65533, 0, 1, -65532, 0, 1, -65531, 0, 1, -65530, 0, 1, -65529, 0, 1, -65528, 0, 1, -65527, 0, 1, -65526, 0, 1, -65525, 0, 1, -65524, 0, 1, -65523, 0, 1, -65522, 0, 1, -65521, 0, 1, -65520, 0, 1, -65519, 0, 1, -65518, 0, 1, -65517, 0, 1, -65516, 0, 2, 65535, 0, 65536, 0, 0, 65537, 1, 0, 65541, 2, 0, 131073, 3, 0, 131073, 4, 0, 131073, 5, 0, 131073, 6, 0, 131073, 7, 0, 131073, 8, 0, 131073, 9, 0, 131073, 10, 0, 131073, 11, 0, 131073, 12, 0, 131073, 13, 0, 131073, 14, 0, 131073, 15, 0, 131073, 16, 0, 65542, 17, 0, 65537, 18, 0, 65537, 19, 0, 65537, 20, 0, 65538, 131071, 0, 65536, 65536, 0, 65541, 65537, 0, 131074, 65552, 0, 131072, 65553, 0, 65542, 65554, 0, 65537, 65555, 0, 65537, 65556, 0, 65538, 196607, 0, 65536, 131072, 0, 65538, 131089, 0, 65536, 131090, 0, 65537, 131091, 0, 65537, 131092, 0, 65538, 262143, 0, 65536, 196608, 0, 65538, 196625, 0, 131072, 196626, 0, 131073, 196627, 0, 65542, 196628, 0, 65538, 327679, 0, 65536, 262144, 0, 65538, 262161, 7, 0, 262163, 0, 65536, 262164, 0, 65538, 393215, 0, 65536, 327680, 0, 65538, 327699, 0, 65536, 327700, 0, 65538, 458751, 0, 65536, 393216, 0, 65538, 393232, 4, 0, 393233, 0, 0, 393234, 0, 1, 393235, 0, 131078, 393236, 0, 65538, 524287, 0, 65536, 458752, 0, 65538, 458769, 0, 65536, 458770, 0, 65537, 458771, 0, 65537, 458772, 0, 65538, 589823, 0, 65536, 524288, 0, 65538, 524295, 0, 0, 524296, 0, 1, 524297, 0, 1, 524298, 0, 1, 524299, 0, 2, 524304, 0, 0, 524305, 0, 131078, 524306, 0, 65537, 524307, 0, 65537, 524308, 0, 65538, 655359, 0, 65536, 589824, 0, 65538, 589831, 0, 65536, 589832, 0, 65537, 589833, 0, 65537, 589834, 0, 65537, 589835, 0, 65538, 589836, 3, 1, 589840, 0, 65536, 589841, 0, 65537, 589842, 0, 65537, 589843, 0, 65537, 589844, 0, 65538, 720895, 0, 65536, 655360, 0, 131077, 655361, 0, 2, 655362, 5, 1, 655364, 0, 3, 655365, 1, 0, 655366, 1, 0, 655367, 0, 65536, 655368, 0, 65537, 655369, 0, 65537, 655370, 0, 65537, 655371, 0, 131077, 655372, 0, 1, 655373, 0, 1, 655374, 0, 1, 655375, 0, 1, 655376, 0, 131078, 655377, 0, 65537, 655378, 0, 65537, 655379, 0, 65537, 655380, 0, 65538, 786431, 0, 131072, 720896, 0, 131073, 720897, 0, 196613, 720898, 0, 196609, 720899, 0, 196609, 720900, 0, 196616, 720901, 0, 196609, 720902, 0, 196609, 720903, 0, 196614, 720904, 0, 131073, 720905, 0, 131073, 720906, 0, 131073, 720907, 0, 131073, 720908, 0, 131073, 720909, 0, 131073, 720910, 0, 131073, 720911, 0, 131073, 720912, 0, 131073, 720913, 0, 131073, 720914, 0, 131073, 720915, 0, 131073, 720916, 0, 131074 )
+
+[node name="Sawblades" type="Node2D" parent="."]
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="Sawblade" parent="Sawblades" instance=ExtResource( 3 )]
+position = Vector2( 64, 64 )
+travel_vector = Vector2( 32, 32 )
+
+[node name="Sawblade2" parent="Sawblades" instance=ExtResource( 3 )]
+position = Vector2( 248, 64 )
+travel_vector = Vector2( -32, 32 )
+
+[node name="Title" type="RichTextLabel" parent="."]
+margin_left = -16.0
+margin_top = 24.0
+margin_right = 336.0
+margin_bottom = 64.0
+custom_fonts/normal_font = ExtResource( 4 )
+bbcode_enabled = true
+bbcode_text = "[center][wave]L-IA[/wave][/center]"
+text = "L-IA"
+scroll_active = false
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+margin_left = 136.0
+margin_top = 72.0
+margin_right = 184.0
+margin_bottom = 120.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Play" type="Button" parent="VBoxContainer"]
+margin_right = 48.0
+margin_bottom = 13.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+custom_colors/font_color = Color( 0.643137, 0.643137, 0.643137, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+text = "Play"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Options" type="Button" parent="VBoxContainer"]
+margin_top = 17.0
+margin_right = 48.0
+margin_bottom = 30.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+custom_colors/font_color = Color( 0.643137, 0.643137, 0.643137, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+text = "Options"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Quit" type="Button" parent="VBoxContainer"]
+margin_top = 34.0
+margin_right = 48.0
+margin_bottom = 48.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+custom_styles/hover = SubResource( 1 )
+custom_styles/pressed = SubResource( 2 )
+custom_styles/focus = SubResource( 3 )
+custom_styles/normal = SubResource( 4 )
+custom_colors/font_color = Color( 0.643137, 0.643137, 0.643137, 1 )
+custom_colors/font_color_hover = Color( 1, 1, 1, 1 )
+text = "Quit"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Socials" type="HBoxContainer" parent="."]
+margin_left = 256.0
+margin_top = 160.0
+margin_right = 312.0
+margin_bottom = 176.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="YTButton" type="TextureButton" parent="Socials"]
+margin_right = 16.0
+margin_bottom = 16.0
+texture_normal = ExtResource( 5 )
+texture_hover = ExtResource( 7 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="ItchButton" type="TextureButton" parent="Socials"]
+margin_left = 20.0
+margin_right = 36.0
+margin_bottom = 16.0
+texture_normal = ExtResource( 6 )
+texture_hover = ExtResource( 8 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="TwitterButton" type="TextureButton" parent="Socials"]
+margin_left = 40.0
+margin_right = 56.0
+margin_bottom = 16.0
+texture_normal = ExtResource( 10 )
+texture_hover = ExtResource( 11 )
+__meta__ = {
+"_edit_lock_": true
+}
+
+[node name="XieneDev" type="Label" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -40.0
+margin_top = 78.0
+margin_right = 40.0
+margin_bottom = 86.0
+text = "XieneDev 2020"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="SelectSFX" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 9 )
+[connection signal="pressed" from="VBoxContainer/Play" to="." method="_on_Play_pressed"]
+[connection signal="pressed" from="VBoxContainer/Options" to="." method="_on_Options_pressed"]
+[connection signal="pressed" from="VBoxContainer/Quit" to="." method="_on_Quit_pressed"]
+[connection signal="pressed" from="Socials/YTButton" to="." method="_on_YTButton_pressed"]
+[connection signal="pressed" from="Socials/ItchButton" to="." method="_on_ItchButton_pressed"]
+[connection signal="pressed" from="Socials/TwitterButton" to="." method="_on_TwitterButton_pressed"]
